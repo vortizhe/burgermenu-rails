@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.version       = BurgerMenu::Rails::VERSION
   spec.authors       = ["Victor Ortiz"]
   spec.email         = ["kespers@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = 'Simple mobile offcanvas menu'
+  spec.description   = 'Simple mobile offcanvas menu made with css3 animations'
   spec.homepage      = ""
   spec.license       = "MIT"
 
