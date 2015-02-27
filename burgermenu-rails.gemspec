@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["kespers@gmail.com"]
   spec.summary       = 'Simple mobile offcanvas menu'
   spec.description   = 'Simple mobile offcanvas menu made with css3 animations'
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/vortizhe/burgermenu-rails"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
