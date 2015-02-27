@@ -7,7 +7,7 @@
 
 
 // vars (split in other file burgermenu/vars)
-$menu-width: 273px;
+$menu-width: 273px !default;
 
 
 
@@ -19,7 +19,9 @@ $menu-width: 273px;
   bottom: 0;
   z-index: 0;
   overflow: hidden;
-  @include transition(all .6s ease);
+  -webkit-transition: all 0.6s ease;
+     -moz-transition: all 0.6s ease;
+          transition: all 0.6s ease;
   ul {
     overflow-x: hidden;
     overflow-y: auto;
@@ -34,12 +36,18 @@ $menu-width: 273px;
     bottom: 0;
     left: $menu-width;
     width: $menu-width;
-    @include transition(all .6s ease);
+    -webkit-transition: all 0.6s ease;
+       -moz-transition: all 0.6s ease;
+            transition: all 0.6s ease;
     z-index: 2;
   }
   .has-children {
     &.opened > .is-children {
-      @include transform(translate3d(-$menu-width,0,0));
+      -webkit-transform: translate3d(-$menu-width, 0, 0);
+         -moz-transform: translate3d(-$menu-width, 0, 0);
+          -ms-transform: translate3d(-$menu-width, 0, 0);
+           -o-transform: translate3d(-$menu-width, 0, 0);
+              transform: translate3d(-$menu-width, 0, 0);
     }
   }
   a {
@@ -49,38 +57,64 @@ $menu-width: 273px;
 
 .burgermenu-left {
   @extend %burgermenu;
-  @include transform(translate3d(-$menu-width,0,0));
+  -webkit-transform: translate3d(-$menu-width, 0, 0);
+     -moz-transform: translate3d(-$menu-width, 0, 0);
+      -ms-transform: translate3d(-$menu-width, 0, 0);
+       -o-transform: translate3d(-$menu-width, 0, 0);
+          transform: translate3d(-$menu-width, 0, 0);
   left: 0;
 }
 .burgermenu-right {
   @extend %burgermenu;
-  @include transform(translate3d($menu-width,0,0));
+  -webkit-transform: translate3d($menu-width, 0, 0);
+     -moz-transform: translate3d($menu-width, 0, 0);
+      -ms-transform: translate3d($menu-width, 0, 0);
+       -o-transform: translate3d($menu-width, 0, 0);
+          transform: translate3d($menu-width, 0, 0);
   right: 0;
 }
 
 .page-wrapper {
   position: relative;
   z-index: 1;
-  @include transition(all .6s ease);
+  -webkit-transition: all 0.6s ease;
+     -moz-transition: all 0.6s ease;
+          transition: all 0.6s ease;
 }
 
 .opened-left {
   overflow: hidden;
   .page-wrapper {
     overflow: hidden;
-    @include transform(translate3d($menu-width,0,0));
+    -webkit-transform: translate3d($menu-width, 0, 0);
+       -moz-transform: translate3d($menu-width, 0, 0);
+        -ms-transform: translate3d($menu-width, 0, 0);
+         -o-transform: translate3d($menu-width, 0, 0);
+            transform: translate3d($menu-width, 0, 0);
   }
   .burgermenu-left {
-    @include transform(translate3d(0,0,0));
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 .opened-right {
   overflow: hidden;
   .page-wrapper {
     overflow: hidden;
-    @include transform(translate3d(-$menu-width,0,0));
+    -webkit-transform: translate3d(-$menu-width, 0, 0);
+       -moz-transform: translate3d(-$menu-width, 0, 0);
+        -ms-transform: translate3d(-$menu-width, 0, 0);
+         -o-transform: translate3d(-$menu-width, 0, 0);
+            transform: translate3d(-$menu-width, 0, 0);
   }
   .burgermenu-right {
-    @include transform(translate3d(0,0,0));
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
