@@ -1,17 +1,16 @@
-/*
-
-  Burger Menu is a simple off canvas side menu with CSS3 transforms triggered by jQuery plugin.
-  By Víctor Ortiz @vorthize
-
-  V.0.1 (2015/02/07)
-  git@github.com:vortizhe/burgermenu-rails.git
-
-*/
+/*!
+ * Burger Menu
+ * Another simple off canvas side menu with CSS3 transforms triggered by jQuery plugin.
+ *
+ * http://github.com/vortizhe/burgermenu
+ *
+ * Copyright (c) 2015 Victor Ortiz
+ * Licensed under the MIT license.
+ */
 
 ;(function ($, window, undefined) {
 
   var $document = $(window.document),
-      $html = $('html'),
       defaults = {
         position: "left",
         toggle_selector: '#menu-toggle',
@@ -35,6 +34,7 @@
 
   BurgerMenu.prototype.init = function() {
     var $el = $(this.element),
+        $html = $('html'),
         opts = this.options;
 
     // Bind open/close menu event burgermenu.toggle to element menu
@@ -63,7 +63,6 @@
       $(this).closest('li').toggleClass('opened');
     });
   };
-
 
 
 
