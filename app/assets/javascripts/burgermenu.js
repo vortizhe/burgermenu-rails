@@ -13,7 +13,7 @@
   var $document = $(window.document),
       defaults = {
         position: "left",
-        toggle_selector: '#menu-toggle',
+        toggle_selector: '#burgermenu-toggle',
         parent_selector: '.has-children',
         children_selector: '.is-children',
         dropdown_selector: '.dropdown',
@@ -37,12 +37,17 @@
         $html = $('html'),
         opts = this.options;
 
+    $html.find('body').append('<div id="burgermenu-blocker"/>');
+    $(opts.toggle_selector).addClass('burgermenu-toggle');
+
     // Bind open/close menu event burgermenu.toggle to element menu
     $el.bind('burgermenu.toggle', function() {
       $html.toggleClass('opened-' + opts.position);
     });
-    $document.on('click', opts.toggle_selector, function(e) {
+
+    $document.on('click touchstart', '#burgermenu-blocker, ' + opts.toggle_selector, function(e) {
       e.preventDefault();
+      e.stopPropagation();
       $el.trigger('burgermenu.toggle');
     });
 
