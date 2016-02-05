@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-Look at http://vortizhe.github.io/burgermenu/ for documentation.
+Look at http://vortizhe.me/burgermenu/ for documentation.
 
 ### Include js and sass
 
